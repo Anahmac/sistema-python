@@ -79,5 +79,3 @@ while True:
                     break
                   else:
                     print("Escolha inválida, tente novamente.") 
-
-#Dúvida: como salvar cada informação em uma lista para ver posteriormente? / ex: nesse código sempre que colocamos pra rodar ele roda do zero, teria a possibilidade de manter os nomes que foram incluídos pelo usuário?
