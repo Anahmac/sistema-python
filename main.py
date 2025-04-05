@@ -1,6 +1,8 @@
 #Nome: Ana Flávia Maciel / Curso: Análise e desenvolvomento de sistemas 
  #Lista para estudantes
 estudantes = []
+invalid = "Essa opção ainda está em desenvolvimento"
+
 #Menu principal 
 def exibir_menu():
   print("Bem-vindo ao menu!")
@@ -38,16 +40,16 @@ while True:
         if escolha == 1:
           print("Você escolheu: Estudantes")
         elif escolha == 2:
-          print("Essa opção ainda está em desenvolvimento")
+          print(invalid)
           continue
         elif escolha == 3:
-          print("Essa opção ainda está em desenvolvimento")
+          print(invalid)
           continue
         elif escolha == 4:
-          print("Essa opção ainda está em desenvolvimento")
+          print(invalid)
           continue
         elif escolha == 5:
-          print("Essa opção ainda está em desenvolvimento")
+          print(invalid)
           continue
         elif escolha == 0:
           print("Encerrando programa")     
@@ -69,10 +71,10 @@ while True:
                     print("Vocês escolheu: Listar")
                     listar_estudantes()
                   elif escolha == 3:
-                    print("Essa opção ainda está em desenvolvimento")
+                    print(invalid)
                     continue
                   elif escolha == 4:
-                    print("Essa opção ainda está em desenvolvimento")
+                    print(invalid)
                     continue
                   elif escolha == 0:
                     print("Voltando ao menu principal")
