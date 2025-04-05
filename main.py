@@ -25,7 +25,7 @@ def incluir_estudantes():
   nome = input("Digite o nome do estudante:")
   estudantes.append(nome)
   print(f"Estudante: {nome}, adicionado com sucesso!")
-#Incluir estudante
+#Update estudante
 def update_estudantes():
   entrada = input("Digite o número ou nome do estudante para remover: ")
   if entrada.isdigit():
@@ -44,7 +44,8 @@ def update_estudantes():
       estudantes[indice] = novo_nome
       print(f"Estudante atualizado com sucesso: {upStudant} -> {novo_nome}")
     else:
-      print("Por favor, digite um número ou nome válido.")  
+      print("Por favor, digite um número ou nome válido.") 
+#Delete estudante 
 def delete_estudantes():
   entrada = input("Digite o número ou nome do estudante para remover: ")
   if entrada.isdigit():
