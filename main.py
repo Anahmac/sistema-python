@@ -20,6 +20,7 @@ def exibir_submenu():
   print ("3. Atualizar")
   print ("4. Excluir")
   print("0. sair")
+  
 #Incluir estudante
 def incluir_estudantes():
   nome = input("Digite o nome do estudante:")
@@ -69,6 +70,7 @@ def listar_estudantes():
       return
     print("Estudantes cadastrados:")
     print(estudantes)
+
 #loop principal
 while True:
         exibir_menu()
