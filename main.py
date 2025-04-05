@@ -39,6 +39,18 @@ def update_estudantes():
         print("Número inválido! Nenhum estudante com esse índice.")
   else:
     print("Por favor, digite um número válido.")  
+def delete_estudantes():
+  numberS = input("Digite o número do estudante: ")
+  if numberS.isdigit():
+    number = int(numberS)
+    if 0 <= number < len(estudantes):
+        upStudant = estudantes[number]
+        del estudantes[number]
+        print(f"Estudante deletado com sucesso: {upStudant}")
+    else:
+        print("Número inválido! Nenhum estudante com esse índice.")
+  else:
+    print("Por favor, digite um número válido.")  
 #Listar estudantes
 def listar_estudantes():
     if not estudantes:
@@ -90,7 +102,9 @@ while True:
                     update_estudantes()
                     continue
                   elif escolha == 4:
-                    print(invalid)
+                    # print(invalid)
+                    print("Vocês escolheu: Deletar")
+                    delete_estudantes()
                     continue
                   elif escolha == 0:
                     print("Voltando ao menu principal")
