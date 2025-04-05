@@ -27,30 +27,40 @@ def incluir_estudantes():
   print(f"Estudante: {nome}, adicionado com sucesso!")
 #Incluir estudante
 def update_estudantes():
-  numberS = input("Digite o número do estudante: ")
-  if numberS.isdigit():
-    number = int(numberS)
+  entrada = input("Digite o número ou nome do estudante para remover: ")
+  if entrada.isdigit():
+    number = int(entrada)
     if 0 <= number < len(estudantes):
         upStudant = estudantes[number]
-        nome = input("Digite o nome do estudante: ")
-        estudantes[number] = nome
-        print(f"Estudante atualizado com sucesso: {upStudant} -> {nome}")
+        novo_nome = input("Digite o novo nome para o estudante: ")
+        estudantes[number] = novo_nome
+        print(f"Estudante atualizado com sucesso: {upStudant} -> {novo_nome}")
     else:
         print("Número inválido! Nenhum estudante com esse índice.")
   else:
-    print("Por favor, digite um número válido.")  
+    if entrada in estudantes:
+      novo_nome = input("Digite o novo nome para o estudante: ")
+      indice = estudantes.index(entrada)
+      estudantes[indice] = novo_nome
+      print(f"Estudante atualizado com sucesso: {upStudant} -> {novo_nome}")
+    else:
+      print("Por favor, digite um número ou nome válido.")  
 def delete_estudantes():
-  numberS = input("Digite o número do estudante: ")
-  if numberS.isdigit():
-    number = int(numberS)
+  entrada = input("Digite o número ou nome do estudante para remover: ")
+  if entrada.isdigit():
+    number = int(entrada)
     if 0 <= number < len(estudantes):
-        upStudant = estudantes[number]
+        upStudant = estudantes[number]1
         del estudantes[number]
         print(f"Estudante deletado com sucesso: {upStudant}")
     else:
         print("Número inválido! Nenhum estudante com esse índice.")
   else:
-    print("Por favor, digite um número válido.")  
+    if entrada in estudantes:
+      estudantes.remove(entrada)
+      print(f"Estudante '{entrada}' removido com sucesso!")
+    else:
+      print("Por favor, digite um número ou nome válido.")  
 #Listar estudantes
 def listar_estudantes():
     if not estudantes:
