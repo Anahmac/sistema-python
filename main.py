@@ -19,8 +19,9 @@ def exibir_submenu():
   print ("2. Listar")
   print ("3. Atualizar")
   print ("4. Excluir")
+  print ("5. Excluir Todos")
   print("0. sair")
-  
+
 #Incluir estudante
 def incluir_estudantes():
   nome = input("Digite o nome do estudante:")
@@ -52,7 +53,7 @@ def delete_estudantes():
   if entrada.isdigit():
     number = int(entrada)
     if 0 <= number < len(estudantes):
-        upStudant = estudantes[number]1
+        upStudant = estudantes[number]
         del estudantes[number]
         print(f"Estudante deletado com sucesso: {upStudant}")
     else:
@@ -63,6 +64,10 @@ def delete_estudantes():
       print(f"Estudante '{entrada}' removido com sucesso!")
     else:
       print("Por favor, digite um número ou nome válido.")  
+#Clear all
+def delete_all_estudantes():
+  estudantes.clear()
+  print(f"Todos Estudantes removido com sucesso!")
 #Listar estudantes
 def listar_estudantes():
     if not estudantes:
@@ -70,7 +75,6 @@ def listar_estudantes():
       return
     print("Estudantes cadastrados:")
     print(estudantes)
-
 #loop principal
 while True:
         exibir_menu()
@@ -118,6 +122,11 @@ while True:
                     # print(invalid)
                     print("Vocês escolheu: Deletar")
                     delete_estudantes()
+                    continue
+                  elif escolha == 5:
+                    # print(invalid)
+                    print("Vocês escolheu: Deletar Todos")
+                    delete_all_estudantes()
                     continue
                   elif escolha == 0:
                     print("Voltando ao menu principal")
