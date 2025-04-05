@@ -25,6 +25,14 @@ def incluir_estudantes():
   nome = input("Digite o nome do estudante:")
   estudantes.append(nome)
   print(f"Estudante: {nome}, adicionado com sucesso!")
+#Incluir estudante
+def update_estudantes():
+  numberS = input("Digite o número do estudante: ")
+  number = int(numberS)
+  upStudant = estudantes[number]
+  nome = input("Digite o nome do estudante:")
+  estudantes[number] = nome
+  print(f"Estudante: {nome}, atualizado com sucesso!")
 #Listar estudantes
 def listar_estudantes():
     if not estudantes:
@@ -71,7 +79,9 @@ while True:
                     print("Vocês escolheu: Listar")
                     listar_estudantes()
                   elif escolha == 3:
-                    print(invalid)
+                    # print(invalid)
+                    print("Vocês escolheu: Atualizar")
+                    update_estudantes()
                     continue
                   elif escolha == 4:
                     print(invalid)
