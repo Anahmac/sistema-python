@@ -28,11 +28,17 @@ def incluir_estudantes():
 #Incluir estudante
 def update_estudantes():
   numberS = input("Digite o número do estudante: ")
-  number = int(numberS)
-  upStudant = estudantes[number]
-  nome = input("Digite o nome do estudante:")
-  estudantes[number] = nome
-  print(f"Estudante: {nome}, atualizado com sucesso!")
+  if numberS.isdigit():
+    number = int(numberS)
+    if 0 <= number < len(estudantes):
+        upStudant = estudantes[number]
+        nome = input("Digite o nome do estudante: ")
+        estudantes[number] = nome
+        print(f"Estudante atualizado com sucesso: {upStudant} -> {nome}")
+    else:
+        print("Número inválido! Nenhum estudante com esse índice.")
+  else:
+    print("Por favor, digite um número válido.")  
 #Listar estudantes
 def listar_estudantes():
     if not estudantes:
